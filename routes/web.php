@@ -13,4 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/**
+ * HOMEPAGE
+ */
 Route::get('/', 'PageController@index' )->name('home');
+
+/**
+ * COMICS
+ */
+Route::resource('comics','ComicController');
