@@ -131,7 +131,7 @@ class ComicsTableSeeder extends Seeder
 
             // 2 Popolazione col
             $new_comic->title = $comic['title'];
-            $new_comic->slug =  Str::slug( '$new_comic->title', '-');
+            $new_comic->slug =  Str::slug( $new_comic->title, '-');
             $new_comic->description = $comic['description'];
             $new_comic->thumb = $comic['thumb'];
             $new_comic->price = $comic['price'];
@@ -142,6 +142,5 @@ class ComicsTableSeeder extends Seeder
             // 3 Save -> row
             $new_comic->save();
         }
-
     }
 }
