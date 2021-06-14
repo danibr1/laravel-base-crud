@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\Comic;
+use Illuminate\Support\Str;
 
 class ComicsTableSeeder extends Seeder
 {
@@ -130,7 +131,7 @@ class ComicsTableSeeder extends Seeder
 
             // 2 Popolazione col
             $new_comic->title = $comic['title'];
-            $new_comic->slug = '';
+            $new_comic->slug =  Str::slug( '$new_comic->title', '-');
             $new_comic->description = $comic['description'];
             $new_comic->thumb = $comic['thumb'];
             $new_comic->price = $comic['price'];
