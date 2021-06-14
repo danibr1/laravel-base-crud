@@ -21,16 +21,17 @@
                         <td>{{ $comic->id }}</td>
                         <td>{{ $comic->title }}</td>
                         <td>{{ $comic->price }}</td>
-                        <td>SHOW</td>
+                        <td>
+                            <a class="btn btn-success"
+                                href=" {{ route ('comics.show', $comic->id) }}">
+                            SHOW
+                            </a>
+                        </td>
                         <td>EDIT</td>
                         <td>DELETE</td>
                     </tr>
                 @endforeach
             </tbody>
         </table>
-
-
-
     </div>
-
 @endsection
