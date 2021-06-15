@@ -1,4 +1,6 @@
 <header class="header mb-3">
+
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container-fluid">
             <a class="navbar-brand" href="{{ route('home')}}">Comics Brand</a>
@@ -17,15 +19,24 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a
-                            class="nav-link active"
+                            class="nav-link @if (Route::currentRouteName() == 'home') active @endif"
                             aria-current="page"
-                            href="{{ route('home')}}"
-                        >
-                        Home
+                            href="{{ route('home')}}">Home
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('comics.index') }}">Comics</a>
+                        <a
+                            class="nav-link @if (Route::currentRouteName() == 'comics.index') active @endif"
+                            href="{{ route('comics.index') }}">
+                            Comics
+                        </a>
+                    </li>
+                     <li class="nav-item">
+                        <a
+                            class="nav-link @if (Route::currentRouteName() == 'comics.create') active @endif"
+                            href="{{ route('comics.create') }}">
+                            New Comic
+                        </a>
                     </li>
                 </ul>
             </div>

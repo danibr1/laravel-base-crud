@@ -7,11 +7,15 @@
 
         <div class="mb-5">
             <span class="badge bg-primary">{{ $comic->type }}</span>
+            <a class="badge bg-warning text-decoration-none"
+                href="{{ route('comics.edit', $comic->id) }}">
+                Edit
+            </a>
         </div>
 
         <div class="row mb-5">
             <div class="col-md-6 text-center">
-                <img class="img-responsive " src="{{ $comic->thumb}}" alt="{{ $comic->title }}">
+                <img class="img-fluid" src="{{ $comic->thumb}}" alt="{{ $comic->title }}">
             </div>
             <div class="col-md-6">
                 <div class="description mb-2">

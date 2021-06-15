@@ -1,17 +1,6 @@
-body {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-}
+/*****************************************
+    APP MAIN STYLE
+*****************************************/
 
-header {
-    flex: 0;
-}
-
-main {
-    flex: 1;
-}
-
-header {
-    flex: 0;
-}
+// GLOBALS
+@import "./partials/general.scss";
