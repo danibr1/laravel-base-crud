@@ -20,7 +20,7 @@
                     <tr>
                         <td>{{ $comic->id }}</td>
                         <td>{{ $comic->title }}</td>
-                        <td>{{ $comic->price }}</td>
+                        <td>{{ $comic->price }} €</td>
                         <td>
                             <a class="btn btn-success"
                                 href=" {{ route ('comics.show', $comic->id) }}">
